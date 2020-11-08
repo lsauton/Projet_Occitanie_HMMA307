@@ -64,7 +64,7 @@
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
 %% Chemin du repertoire contenant toutes les Figures
-\graphicspath{{./Figures/}}
+\graphicspath{{./Images/}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                                                    %%
@@ -84,7 +84,7 @@
 \begin{titlepage}
   \begin{center}
     \vspace*{-2cm}
-    \includegraphics[width=0.25\textwidth]{Organisation/Logo.pdf}\\[1cm]
+    \includegraphics[width=0.25\textwidth]{Logo.pdf}\\[1cm]
 
     \textsc{\LARGE Université Montpellier 2}\\[1.5cm]
 
@@ -95,8 +95,7 @@
     {\huge \textbf{Etude des niveaux de pollution sur l'Occitanie en 2020}}\\[0.4cm]
     
     \HRule\\[1.5cm]
-
-    \includegraphics[width=\textwidth]{Organisation/figurePage2garde-eps-converted-to.pdf}
+    
     \vfill
     \begin{minipage}{0.4\textwidth}
       \begin{flushleft}
@@ -152,7 +151,7 @@ Les données présentent la concentrations moyennes journalières issues du rés
 La figure \ref{fig:Evo} nous permet de constaté que l'Ozone et le Dioxyde d'Azote on une allure opposé avec un pic atteint entre mars et avril. De plus les courbes de chaque ville se suivent et observent ce même pic.
 \begin{figure}
   \centering
-  \includegraphics[width=\textwidth]{Organisation/Evolution_O3_NO2.pdf}
+  \includegraphics[width=\textwidth]{Evolution_O3_NO2.pdf}
   \caption[Titre plus synthétique aller voir comme il diffère du titre
   original.]{gauche: Evolution de l'ozone (O3) pour Montpellier, Toulouse et Perpignan l'année 2020. Droite: l'évolution du dioxyde d'azote (NO2) pour 3 même villes.  }
   \label{fig:Evo}
@@ -169,7 +168,12 @@ La figure \ref{fig:Evo} nous permet de constaté que l'Ozone et le Dioxyde d'Azo
 
 Nous allons maintenant réaliser un test Anova pour comparer les moyennes de différentes villes de notre de base et voir s'il y a, ou non, une différence entre elles. Nous avons choisi deux cas de figures. Le premier cas, nous avons choisi de prendre des villes assez proche géographiquement de Montpellier ( comme Lattes par exemple). Le deuxième cas, sur des villes éloignés de Montpellier ( comme Toulouse ).
 
-Le modèle :  
+Le modèle :  \[y_{ij}=\mu^*+ \alpha_j+\varepsilon_{ij}\]\\
+$i$ : taille de la période étudiée
+$j$  nombre de villes \\
+
+
+
 
 
 \section{Comparaison entre 3 villes éloignés}
@@ -219,37 +223,14 @@ Dans le tableau~\ref{tab:anovmgly}, page~\pageref{tab:anovmgly} nous lisons que 
 
 Dans le tableau~\ref{tab:anovmgl}, page~\pageref{tab:anovmgl} nous lisons que la $p_{value}$  est plus petite que $\alpha$ alors on rejette $H_0$  et il y a donc une différences significative du niveau moyen d'Ozone entre Montpellier, Saint-Gély-du-fesc et Lattes pendant le confinenment
 
-
-
-%
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                                                    %%
-%%                      CONCLUSION                                    %%
+%%                      Tableaux Anova                                %%
 %%                                                                    %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter*{Conclusion}
-
-Lors de nos différentes études nous avons pu constater une différence sur cette année du niveau de pollution suivant les villes étudiées. Nous auront pu penser  ne pas observer de différence que pour ce qui est des villes proches ( Montpellier, Saint Gély , Lattes ).
 
 
-\nocite{R,Dav,Agr,nat,Li:1985,BrCl,CM,LesSpi,LitRub,MCN}
-\bibliographystyle{apalike}  
-\bibliography{references}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%                                                                    %%
-%%                      Table d'anova                                   %%
-%%                                                                    %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\appendix
-
-\chapter{Tableaux d'Anova}
-\label{cha:table danova}
 \begin{table}
   \centering
   \caption[]{Table de l'Anova réalisé sur Montpellier, Toulouse et Perpignan pour ce qui
@@ -317,5 +298,19 @@ Lors de nos différentes études nous avons pu constater une différence sur cet
 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                    %%
+%%                      CONCLUSION                                    %%
+%%                                                                    %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter*{Conclusion}
+
+Lors de nos différentes études nous avons pu constater une différence sur cette année du niveau de pollution suivant les villes étudiées. Nous auront pu penser  ne pas observer de différence que pour ce qui est des villes proches ( Montpellier, Saint Gély , Lattes ).
+
+
+\nocite{R,Dav,Agr,nat,Li:1985,BrCl,CM,LesSpi,LitRub,MCN}
+\bibliographystyle{apalike}  
+\bibliography{references}
 
 \end{document}
