@@ -1,0 +1,62 @@
+\documentclass[a4paper,11pt]{article}
+
+
+\newcommand{\titrecours}{Classifieur de Bayes}
+\newcommand{\titretd}{Apprentissage statistique}
+\newcommand{\auteur}{Joseph Salmon}
+\newcommand{\annee}{Master M2MO: 2017/2018}
+\newcommand{\ecole}{Universit\'e Paris Diderot}% \titre{}
+
+\usepackage{../sty/td}
+\usepackage{../sty/shortcuts_js}
+\addbibresource{../biblio/references_all.bib}
+
+
+\begin{document}
+\sloppy
+\feuille{1}
+
+\medskip
+
+
+% DGL p.11-12
+\exercice  On considère un modèle de classification où le couple aléatoire $(X, Y)$ est de loi $P$ décrite par :
+\begin{itemize}
+\item la loi de $X$ est une loi de probabilité $P_X$ sur $\bbR$
+\item la fonction de régression $\displaystyle \eta(x) = \frac{x}{x+\theta}$ où $\theta>0$ fixé.
+\end{itemize}
+On note $h^*$ le classifieur de Bayes. Expliciter le classifieur de Bayes dans ce modèle. Montrer ensuite que son risque ``0-1'' vaut
+\begin{equation*}
+	R(h^*)=\int \min(\eta(x),1-\eta(x)) dP_X(x).
+\end{equation*}
+ Calculer le risque de Bayes lorsque $P_X = \cU([0, \alpha\theta])$ où $\alpha>1$.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Conseils bibliographiques}
+\label{sec:bibliographie}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Vous trouverez ci-dessous quelques points d’entrée utiles pour l'apprentissage automatique:
+
+\begin{itemize}
+	\item Théorique et porté sur les aspects probabilistes: \cite{Devroye_Gyorfi_Lugosi96}
+	\item Utilitaire et porté sur les aspects pratiques: \cite{Hastie_Tibshirani_Friedman09}
+	\item Livre récent porté essentiellement sur l’aspect optimisation: \cite{Shalev-Shwartz_Ben-David14} (et du même auteur sur l'apprentissage en ligne \cite{Shalev-Shwartz11})
+	\item Méthodes Bayésiennes et modèles graphiques: \cite{Murphy12}
+\end{itemize}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\printbibliography
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\end{document}
